@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js DOM</title>
+</head>
+<body>
+    
+    <h1>This is a heading</h1>
+    
+
+    <form action="" method="">
+        <label>Enter Your Average Marks:</label>
+        <input type="number" name="marks" id="marks" value="" onkeyup="grade()">
+    </form>
+
+    <h4 id="result"></h4>
+
+    
+    <script>
+        function grade()
+        {
+            let marks = document.getElementById('marks').value; // string
+            
+            if(parseFloat(marks) >= 80){
+                document.getElementById('result').innerHTML = "The Grade is=A+";
+            }
+
+            else if(parseFloat(marks) >= 70){
+                document.getElementById('result').innerHTML = "The Grade is=A";
+            }
+        }
+    </script>
+</body>
+</html>
